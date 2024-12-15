@@ -35,6 +35,8 @@ class TopWindow(QMainWindow):
         self.layout = layout
         self.LayoutViewer = LayoutView.GLWindow(img, main=self, parent=self.centeralWidget)
         wallNum, wallPoints, lines, mesh = Utils.Label2Mesh(Utils.OldFormat2Mine(self.layout), floor_reverse)
+        # print("Mesh data:", mesh)
+        # mesh[:, 1] *= -1
         self.LayoutViewer.updateLayoutMesh(wallNum, wallPoints, lines, mesh)
 
         layout = QGridLayout()

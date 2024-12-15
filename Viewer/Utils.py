@@ -95,7 +95,7 @@ def Label2Mesh(label, reverse=False):
         ceiling_mesh[:, 1] = -(layout_height - 1.6)
         floor_mesh = ceiling_mesh.copy()
         floor_mesh[:, 1] = 1.6
-        #mesh = np.concatenate([mesh, ceiling_mesh, floor_mesh], axis=0)
+        mesh = np.concatenate([mesh, ceiling_mesh, floor_mesh], axis=0)
         mesh = np.concatenate([mesh, floor_mesh], axis=0)
     except:
         pass

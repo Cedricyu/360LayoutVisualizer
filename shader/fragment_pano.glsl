@@ -72,11 +72,11 @@ void main(){
     vec2 coord = vec2(lon, lat);
     if (!checkIntersectWalls(vec2(x, z)))
     //if (true)
-        fragColor = vec4(texture(pano, coord).xyz, alpha);
+        fragColor = vec4(texture(pano, coord).xyz, 1);
     else{
         if (mod(y * 10, 10) < 5 ^^ mod(x * 10, 10) < 5 ^^ mod(z * 10, 10) < 5)
-            fragColor = vec4(vec3(1.0, 1.0, 1.0), alpha);
+            fragColor = vec4(vec3(1.0, 1.0, 1.0), 1);
         else
-            fragColor = vec4(vec3(0.5, 0.5, 0.5), alpha);
+            fragColor = vec4(vec3(0.5, 0.5, 0.5), 1);
     }
 }
